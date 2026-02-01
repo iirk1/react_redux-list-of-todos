@@ -58,9 +58,7 @@ export const App = () => {
 
             <div className="block">
               {isLoading && <Loader />}
-              {todos.length !== 0 && (
-                <TodoList isLoading={isLoading} todos={visibleTodos} />
-              )}
+              {todos.length !== 0 && <TodoList todos={visibleTodos} />}
             </div>
           </div>
         </div>

@@ -7,10 +7,9 @@ import { currentTodoSlice } from '../../features/currentTodo';
 
 type Props = {
   todos: Todo[];
-  isLoading: boolean;
 };
 
-export const TodoList: React.FC<Props> = ({ todos, isLoading }) => {
+export const TodoList: React.FC<Props> = ({ todos }) => {
   const currentTodo = useAppSelector(state => state.currentTodo);
 
   const dispatch = useAppDispatch();
