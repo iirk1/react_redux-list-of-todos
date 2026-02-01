@@ -18,7 +18,7 @@ export const TodoModal: React.FC = () => {
     setIsLoading(true);
     setUser(null);
 
-    getUser(currentTodo.id)
+    getUser(currentTodo.userId)
       .then(res => setUser(res))
       .finally(() => setIsLoading(false));
   }, [currentTodo]);
@@ -38,7 +38,7 @@ export const TodoModal: React.FC = () => {
               className="modal-card-title has-text-weight-medium"
               data-cy="modal-header"
             >
-              Todo #{user?.id}
+              Todo #{currentTodo?.id}
             </div>
 
             {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
