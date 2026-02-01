@@ -5,6 +5,7 @@ import { filterSlice } from '../../features/filter';
 
 export const TodoFilter: React.FC = () => {
   const { status, query } = useAppSelector(state => state.filter);
+
   console.log(status, query);
 
   const dispatch = useAppDispatch();
